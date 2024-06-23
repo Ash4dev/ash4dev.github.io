@@ -1,4 +1,13 @@
 title: Ashutosh Panigrahy
-# logo: 
-# description: Final year UG
+logo: assets/photo-removebg-preview.jpg
+description: |
+  <button id="github">
+    <a href="https://github.com/Ash4dev">Github</a>
+  </button>
+  <button id="linkedin">
+    <a href="https://www.linkedin.com/in/ashutosh-panigrahy/">Linkedin</a>
+  </button>
+  <button id="kaggle">
+    <a href="https://www.kaggle.com/ashtonronald">Kaggle</a>
+  </button>
 theme: jekyll-theme-hacker
