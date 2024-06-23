@@ -1,35 +1,29 @@
-**Email:** ashutoshp.iitkgp@gmail.com | **Phone:** +91-9777025199
-
----
-
 ## Education
 
-- **Integrated Masters, Financial Engineering**
-  - Minor in Mathematics & Computing (M.Sc. 5Y)
-  - Micro Spl. in Entrepreneurship and Innovation, Artificial Intelligence and Applications
-  - IIT Kharagpur, 2025
-  - CGPA: 8.58 / 10
+- **[Financial Engineering](https://www.iitkgp.ac.in/financial-engineering) @IIT Kharagpur                  2020-2025**
+  - CGPA: 8.55 / 10
+  - Minor: Mathematics & Computing, Micro Spl: AI, Entrepreneurship
 
-- **CBSE (XII)**
-  - Sai International School, 2020
-  - Marks: 98.4%
+- **CBSE (XII) @Sai International School                2020**
+  - Grade: 98.4%
 
-- **CBSE (X)**
-  - Sai International School, 2018
-  - Marks: 97%
+- **CBSE (X) @Sai International School                2018**
+  - Grade: 97%
 
 ---
 ## Awards and Achievements
-
-- Among the top 3% of 7,200 participating teams globally in the IMC Prosperity Trading Challenge (2023)
-- Among the top 20 teams selected from the Asia-Pacific region for the Citadel Data Open (2023)
-- Among the top 3% students out of 250,000 who appeared for the JEE Advanced exam (2020)
-- Among the top 0.01% students out of 1,200,000 who appeared for the JEE Mains exam (2020)
-- Achieved the 2nd rank out of 60,000 students in Odisha who appeared for class XII board exams (2020)
+- [IMC Automated Trading Challenge](https://prosperity.imc.com/) (2023): Top 3% of 7,200 teams globally
+- [Citadel DataThon](https://www.citadelsecurities.com/careers/students/datathons/) (2023): Top 20 teams selected from Asia-Pacific region
+- JEE Advanced (2020):Top 3% students out of 250,000 candidates
+- JEE Mains (2020): Top 0.01% students out of 1,200,000 candidates
+- XII Boards (2020): 2nd out of 60,000 students in Odisha state, India
 
 ---
 
 ## Internships
+
+### Data Analytics Intern @SahiBandhu Fintech 
+
 
 ### Machine Learning Intern, AI4ICPS Innovation Hub (Remote)
 **May 2023 - Jul 2023**
