@@ -1,4 +1,4 @@
-# A bit about me!
+A bit about me!
 
 ---
 
