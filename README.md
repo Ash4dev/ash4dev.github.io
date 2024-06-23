@@ -1,19 +1,22 @@
+---
+
 ## Education
 
-- **[Financial Engineering](https://www.iitkgp.ac.in/financial-engineering) @IIT Kharagpur                  2020-2025**
+- **[Financial Engineering](https://www.iitkgp.ac.in/financial-engineering) @IIT Kharagpur 2020-2025**
   - CGPA: 8.55 / 10
-  - Minor: Mathematics & Computing, Micro Spl: AI, Entrepreneurship
+  - Minor: Mathematics & Computing
+  - Micro Specialization: AI, Entrepreneurship
 
-- **CBSE (XII) @Sai International School                2020**
+- **XII Boards @Sai International School 2020**
   - Grade: 98.4%
 
-- **CBSE (X) @Sai International School                2018**
+- **X Boards @Sai International School 2018**
   - Grade: 97%
 
 ---
 ## Awards and Achievements
 - [IMC Automated Trading Challenge](https://prosperity.imc.com/) (2023): Top 3% of 7,200 teams globally
-- [Citadel DataThon](https://www.citadelsecurities.com/careers/students/datathons/) (2023): Top 20 teams selected from Asia-Pacific region
+- [Citadel Datathon](https://www.citadelsecurities.com/careers/students/datathons/) (2023): Top 20 teams selected from Asia-Pacific region
 - JEE Advanced (2020):Top 3% students out of 250,000 candidates
 - JEE Mains (2020): Top 0.01% students out of 1,200,000 candidates
 - XII Boards (2020): 2nd out of 60,000 students in Odisha state, India
@@ -23,7 +26,10 @@
 ## Internships
 
 ### Data Analytics Intern @SahiBandhu Fintech 
-
+- Enhanced and automated daily customer data discrepancy checks, reducing the discrepancy rate from 12% to 3% to ensure data accuracy and reliability.
+- Streamlined targetted weekly repeat customer analysis with retention metrics such as RFM, CLV and visualizations for effective trend monitoring
+- Built models to determine customer segments, churn probability & next purchase predictions, providing insights for targeted marketing and customer retention strategies.
+- Developed an intuitive UI for the sales team that generates personalized quotations for the latest loan offerings by gold loan providers
 
 ### Machine Learning Intern, AI4ICPS Innovation Hub (Remote)
 **May 2023 - Jul 2023**
