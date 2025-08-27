@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-----METAS----->
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no"
+        />
+        <meta
+            name="description"
+            content="Explore Ashutosh's personal webpage to find projects, pictures, contact information, and more! Featuring a terminal-inspired design with stunning effects."
+        />
+        <meta name="author" content="ash4dev-iwnl" />
+        <meta name="theme-color" content="#72B6FF" />
+        <meta property="og:title" content="ash4dev-iwnl" />
+        <meta property="og:site_name" content="ash4dev.xyz" />
+        <meta
+            property="og:description"
+            content="Explore Ashutosh's personal webpage to find projects, pictures, contact information, and more! Featuring a terminal-inspired design with stunning effects."
+        />
+        <meta property="og:url" content="https://ash4dev.github.io" />
+        <meta
+            name="keywords"
+            content="ash4dev, ash4dev, ash4dev, ash4deviwnl, ash4deviwnl, ash4dev-iwnl, ash4deviwnldev, kiyokosmacros, ash4dev github, ash4dev dev, ash4dev coding, ash4dev programming, ash4dev projects, programming projects, open-source developer, GitHub projects, web development"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="revisit-after" content="7 days" />
+        <!-----TITLE------>
+        <title>ash4dev-iwnl</title>
+
+        <!-----SCRIPT-JS------>
+        <script src="/src/js/script.js" defer></script>
+        <script type="module" src="/status/status-script.js" defer></script>
+        <script
+            defer
+            data-project="6717a0715070bb77bf000f0d"
+            src="https://cdn.jsdelivr.net/gh/litlyx/litlyx-js/browser/litlyx.js"
+        ></script>
+
+        <!-----LINKS------>
+        <link
+            rel="preload"
+            as="font"
+            href="src/fonts/AgaveNerdFont-Regular.ttf"
+            type="font/ttf"
+            crossorigin="anonymous"
+        />
+        <link rel="icon" href="/src/media/favicons/favicon.ico" />
+        <link rel="stylesheet" href="/src/css/style.css" />
+
+        <!---FONT AWESOME------->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+
+    <body>
+        <!----noise.mp4---->
+        <!---src="https://files.catbox.moe/hop8wg.mp4"--->
+        <video
+            preload="none"
+            onloadstart="this.playbackRate = 0.65;"
+            autoplay
+            muted
+            loop
+            playsinline
+            id="noise_vid"
+            src="/src/media/noise.mp4"
+            poster="/src/media/noise_static.png"
+        ></video>
+
+        <!----rain_bg.mp4---->
+        <!---src="https://files.catbox.moe/i7le27.mp4"--->
+        <video
+            preload="none"
+            onloadstart="this.playbackRate = 0.85;"
+            autoplay
+            muted
+            loop
+            playsinline
+            id="rain_vid"
+            src="/src/media/rain_bg.mp4"
+            poster="/src/media/rain_bg_static.png"
+        ></video>
+
+        <div id="snow-container"></div>
+        <div class="vignette"></div>
+        <div id="videohue"></div>
+        <div id="canvas">
+            <header>
+                <p style="text-align: center">
+                    If I have seen further, it is by standing on the
+                                shoulders of giants ~ Isaac Newton
+                </p>
+            </header>
+            <div id="hamburger-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <nav id="nav_tabs">
+                <ul style="text-align: center">
+                    <li>
+                        <a href="#home" class="tab_switcher" id="home_tab"
+                            >Home</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#about" class="tab_switcher" id="about_tab"
+                            >About</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#projects"
+                            class="tab_switcher"
+                            id="projects_tab"
+                            >Projects</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#pictures"
+                            class="tab_switcher"
+                            id="pictures_tab"
+                            >Pictures</a
+                        >
+                    </li>
+                    <!-- <li class="dropdown">
+                        <a href="#" class="dropdown-toggle"
+                            >More <i class="fa-solid fa-angle-down"></i
+                        ></a>
+                        <div class="dropdown-menu">
+                            <a href="./resources.html">Resources</a>
+                            <a href="./music.html">Music</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="./blog.html" class="tab_switcher" id="blog_tab"
+                            >Blog</a
+                        >
+                    </li> -->
+                </ul>
+            </nav>
+            <div id="home" class="tabs">
+                <div class="grid">
+                    <div class="grid_row">
+                        <div class="grid_row_box_dotted">
+                            <h2>Hey Friend! Welcome to my digital mindspace!</h2>
+                            <p><em>Updated: 24/08/2025</em></p>
+                            <br />
+                            <p>
+                                Take a look around to know more about my
+                                interests!
+                            </p>
+                            <br />
+                            <p class="pr_warning">
+                                [!] The website is heavily based off the work of
+                                <a href="https://fr0st.xyz/#home">fr0st.xyz</a>.
+                            </p>
+                            <br />
+                            <p class="pr_privacy">
+                                [?] For information on how I handle your traffic
+                                data, please check my
+                                <a href="/privacy.html">Privacy Policy</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid_row">
+                        <div class="grid_row_box_dotted">
+                            <div class="latest-updates">
+                                <h2>Latest Updates</h2>
+                                <div id="update-list">
+                                    <p>
+                                        <em title="Updated at 19:14"
+                                            >AUGUST 27th, 2025:</em
+                                        >
+                                        Updated the projects listed.
+                                    </p>
+                                    <p>
+                                        <em title="Updated at 21:34"
+                                            >AUGUST 26th, 2025:</em
+                                        >
+                                        Fixed the themes & updated the about page.
+                                    </p>
+                                    <p>
+                                        <em title="Updated at 0:02"
+                                            >AUGUST 25th, 2025:</em
+                                        >
+                                        Retained necessary & interesting
+                                        components from fr0st.
+                                    </p>
+                                </div>
+                                <p class="show-more-btn">
+                                    <a id="show-more-btn"> < Show More ></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid_row">
+                            <div class="grid_row_box_dotted_status"></div>
+                        </div>
+                        <div class="grid_row_box_dotted grid_row_box_shrink">
+                            <div id="theme_selector">
+                                <h2>Themes</h2>
+                                <div id="theme_list">
+                                    <p>
+                                        <a onclick="changeTheme('winter')"
+                                            >winter</a
+                                        >
+                                    </p>
+                                    <p>
+                                        <a onclick="changeTheme('terminal')"
+                                            >terminal</a
+                                        >
+                                    </p>
+                                    <p>
+                                        <a onclick="changeTheme('ocean')"
+                                            >> ocean <</a
+                                        >
+                                    </p>
+                                    <p>
+                                        <a onclick="changeTheme('win95')"
+                                            >win95</a
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="projects" class="tabs">
+                <h2>PROJECTS</h2>
+                <!-- <nav>
+                    <ul>
+                        <li>
+                            <a
+                                onclick="changeColl('webdev')"
+                                class="tab_active pic_coll_tabs"
+                            >
+                                ≡ Web Development</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                onclick="changeColl('configs&scripts')"
+                                class="pic_coll_tabs"
+                            >
+                                ≡ Configs & Scripts
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                onclick="changeColl('macros')"
+                                class="pic_coll_tabs"
+                                >≡ AHK Macros</a
+                            >
+                        </li>
+                    </ul>
+                </nav> -->
+                <hr class="dotted" />
+                <ul id="pr_list">
+                    <!-- Web Development Projects -->
+                    <li data-category="webdev">
+                        <p class="pr_title">Financial Xchange</p>
+                        <p class="pr_desc">
+                            A toy implementation of an L2 orderbook written in C++23 supporting multiple ordertypes along with core-functionalities.
+                        </p>
+                        <div class="tag-list">
+                            <p class="tag open-source">Open-Source</p>
+                            <p class="tag active">Ongoing</p>
+                            <a href="https://github.com/Ash4dev/xchange/tree/main" target="_blank"
+                                ><h3>Visit</h3></a
+                            >
+                        </div>
+                    </li>
+                    <li data-category="webdev">
+                        <p class="pr_title">Chess++</p>
+                        <p class="pr_desc">
+                            Terminal-based Chess game developed in C++ featuring human multiplayer and AI opponent gameplay.
+                        </p>
+                        <div class="tag-list">
+                            <p class="tag open-source">Open-Source</p>
+                            <p
+                                class="tag inactive"
+                                data-tooltip="not currently being worked on"
+                            >
+                                On Hold
+                            </p>
+                            <a href="https://github.com/Ash4dev/xchange/tree/main" target="_blank"
+                                ><h3>Visit</h3></a
+                            >
+                        </div>
+                        <p>
+                        </p>
+                    </li>
+                    <li data-category="webdev">
+                        <p class="pr_title">Currency Arbitrage Detector</p>
+                        <p class="pr_desc">
+                            Forex currency arbitrage trading bot written in Flask utilizing Yahoo Finance as data source.
+                        </p>
+                        <div class="tag-list">
+                            <p class="tag open-source">Open-Source</p>
+                            <p class="tag active">Done</p>
+                            <a
+                                href="https://github.com/Ash4dev/Currency-Arbitrage-Detector"
+                                target="_blank"
+                                ><h3>Visit</h3></a
+                            >
+                        </div>
+                        <p>
+                        </p>
+                    </li>
+                    <li data-category="webdev">
+                        <p class="pr_title">Mini-cron</p>
+                        <p class="pr_desc">
+                            A lightweight, distributed and fault-tolerant cron-style scheduler inspired by Dkron.
+                        </p>
+                        <div class="tag-list">
+                            <p class="tag open-source">Open-Source</p>
+                            <p class="tag inactive">On Hold</p>
+                            <a
+                                href="https://github.com/Anjaniputra15/quants-in-motion"
+                                target="_blank"
+                                ><h3>Visit</h3></a
+                            >
+                        </div>
+                    </li>
+                    <!-- https://github.com/Anjaniputra15/quants-in-motion -->
+                    <!-- https://github.com/danialasaria/hft -->
+                    <li data-category="webdev">
+                        <p class="pr_title">Async Market Feed with Concurrency Control</p>
+                        <p class="pr_desc">
+                            A repository showcasing async I/O, GIL-aware concurrency, and memory-safe performance engineering in a trading-like system.
+                        </p>
+                        <div class="tag-list">
+                            <p class="tag open-source">Open-Source</p>
+                            <p class="tag inactive">On Hold</p>
+                            <a
+                                href="https://github.com/Anjaniputra15/quants-in-motion"
+                                target="_blank"
+                                ><h3>Visit</h3></a
+                            >
+                        </div>
+                        <br />
+                        <p>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="pictures" class="tabs">
+                <h2>PICTURES</h2>
+                <br />
+                <p>Beautiful pictures that I found in my gallery. Thank you to all who sent these lovely pictures along the way!</p>
+                <div id="pictures_list">
+                </div>
+            </div>
+
+            <div id="about" class="tabs">
+                <div class="grid">
+                    <div class="grid_row">
+                        <div class="grid_row_box_dotted">
+                            <h2>About Me</h2>
+                            <p>
+                                I'm Ashutosh and am
+                                <span
+                                id="realtime-age"
+                                class="age-display"
+                                ></span>
+                                years old. A forever curious lad from India who
+                                thrives on forming deep connections with the
+                                people around.
+                            </p>
+                            <br />
+                            <p>
+                                I enjoy working on various hands-on projects
+                                that enhance my understanding of computer
+                                science fundamentals not limited to computer
+                                networking, operating systems, system design and
+                                more.
+                            </p>
+                            <hr>
+                            <p>
+                                An Indian Institute of Technology Kharagpur <a href="https://www.topuniversities.com/universities/indian-institute-technology-kharagpur-iit-kgp">(IIT KGP)</a> 2025 alumnus with a master's in <a href="https://en.wikipedia.org/wiki/Financial_engineering#:~:text=Financial%20engineering%20is%20a%20multidisciplinary,in%20the%20practice%20of%20finance.">Financial Engineering</a> and a Bachelor's in   Biotechnolgy.
+                            </p>
+                            <br />
+                            <p>
+                                Global finalist in the <a href="https://www.linkedin.com/posts/akuna-capital_applications-are-open-for-our-virtual-quantitative-activity-7213581583822245890-O6HE?utm_source=share&utm_medium=member_desktop&rcm=ACoAADLUcDYB8lg15dvQZUS76ftuMsbt453K_hQ">Akuna Quant Trading Challenge</a> 2024 and gloabal top 3% of <a href="https://prosperity.imc.com/">IMC Prosperity Trading Challenge </a> 2023 & 2025. Top 20 teams in Asia-Pacific for the <a href="https://www.citadel.com/careers/programs-and-events/datathons/">Citadel APAC Datathon</a> 2023.
+                            </p>
+                            <br />
+                            <p>
+                                Currently, an L1 software engineer @<a href="https://www.tcgdigital.com/">TCG digital</a> with previous internship experiences @<a href="https://manipalfintech.com/">Manipal Fintech</a>(2024) and @<a href="https://ai4icps.in/projects?section=ai_energy">AI4ICPS</a>(2023).
+                            </p>
+                            <hr>
+                            <p>
+                                Apart from spending time on the computer, I
+                                challenge myself by reading about western and
+                                eastern philosophy ranging from
+                                <a href="https://www.reddit.com/r/Stoicism/"
+                                >stoicism</a
+                                >
+                                to
+                                <a href="https://www.reddit.com/r/nonduality/"
+                                >non-duality</a
+                                >.
+                            </p>
+                            <!-- Currently reading: https://www.goodreads.com/book/show/139005.The_Essays_of_Ralph_Waldo_Emerson -->
+                            <br />
+                            <p>
+                                Endurance sports enthusiast with eyes currently
+                                set on the
+                                <a href="https://tourofnilgiris.com/"
+                                    >Tour of Nilgiris</a
+                                >
+                                &
+                                <a href="https://tatasteelworld25k.procam.in/"
+                                    >Tata Steel Kolkata Marathon</a
+                                >
+                                and eventually,
+                                <a href="https://www.ironman.com/">Ironman</a>.
+                                Thanks
+                                <a href="https://davidgoggins.com/"
+                                    >David Goggins!</a
+                                >
+                            </p>
+                            <br />
+                            <p>
+                                Lifelong
+                                <a href="https://www.arsenal.com/">Arsenal</a>
+                                fan (COYG!) & an ardent music lover! Check out
+                                what I've been listening to:
+                                <a
+                                    class="music"
+                                    href="music.html"
+                                    target="_blank"
+                                    >🔊</a
+                                >
+                            </p>
+                        </div>
+                        <div class="grid_row_box_dotted">
+                            <h2>Skills</h2>
+                            <p>Core Competencies:</p>
+                            <br />
+                            <p>
+                                > GNU/Linux
+                                <em
+                                    >Open-source UNIX-like OS, widely used for its flexibility, security, and control. I use Arch btw!</em
+                                >
+                            </p>
+                            <p>
+                                > Bash Scripting
+                                <em
+                                    >Automating repetitive tasks in Unix-like environments to boost productivity. Cron your worries away!</em
+                                >
+                            </p>
+                            <p>
+                                > C/C++
+                                <em
+                                    >Fast and powerful, ideal for building low-latency, high-performance systems. Simplicity is the ultimate
+                                    sophistication!</em
+                                >
+                            </p>
+                            <p>
+                                > Python
+                                <em>
+                                    Go-to language for prototyping, analytics, and building quick proof-of-concepts. A
+                                    total keeper!</em
+                                >
+                            </p>
+                            <p>
+                                > Docker
+                                <em>
+                                    The pack and go solution for your software for a smooth developer experience.
+                                    It works everywhere!</em
+                                >
+                            </p>
+                            <br/>
+                            <p>Actively learning:</p>
+                            <br />
+                            <!-- http://linkedin.com/posts/pranay-gaurav-290a30150_in-crypto-high-frequency-trading-hft-databases-activity-7310941723621257216-RAq1/ -->
+                            <!-- https://medium.com/@nidhey60/kafka-vs-rabbitmq-choosing-the-right-tool-for-your-system-f39f7f5d8e42 -->
+                            <!-- https://growth-guru.medium.com/mastering-high-frequency-trading-a-comprehensive-guide-to-architecture-technology-and-best-8774c9942fac -->
+                            <p>
+                                > Apache Kafka
+                                <em
+                                    >Real-time event driven management system.
+                                    Controls it all!</em
+                                >
+                            </p>
+                            <p>
+                                > Redis
+                                <em
+                                    >Fast in-memory database for all your
+                                    caching needs. I am speed!</em
+                                >
+                            </p>
+                           <hr>
+                            <p>Auxillary Skills:</p>
+                            <br />
+                            <p>> Webdev & Devops: AWS, Git, Ngnix, Typescript, GitLab, Postman, JIRA</p>
+                            <hr>
+                            <p>Novice:</p>
+                            <br/>
+                            <p>> Finance: Fin Derivatives, Fixed Income Securities, Portfolio Optimization</p>
+                            <p>> Data Science: Excel, Pandas, Numpy, Matplotlib, Plotly, Sk-learn, Pytorch</p>
+                            <br />
+                        </div>
+                    </div>
+                    <div class="grid_row">
+                        <div class="grid_row_box_dotted">
+                            <h2>Favourite Reads/Shows:</h2>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <i
+                                            class="fa fa-file-text fav-icon"
+                                        ></i
+                                        >－ The Essays (Ralph Waldo Emerson) - [Book]
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i
+                                            class="fas fa-running fav-icon"
+                                        ></i
+                                        >－ Can't Hurt Me (David Goggins) - [Book]
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i
+                                            class="fab fa-think-peaks fav-icon"
+                                        ></i
+                                        >－ Four Agreements (Don Miguel Ruiz) - [Book]
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i
+                                            class="fa-solid fa-user-secret fav-icon"
+                                        ></i
+                                        >－ Murder on the Orient Express (Agatha Christie) - [Book]
+                                    </td>
+                                </tr>
+                                <!-- <tr>
+                                    <td>
+                                        <i
+                                        class="fa-solid fa-user-secret fav-icon"
+                                        ></i
+                                        >－ And Then There Were None (Agatha Christie) - [Book]
+                                    </td>
+                                </tr> -->
+                                <tr>
+                                    <td>
+                                        <i
+                                            class="fas fa-tachometer-alt fav-icon"
+                                        ></i
+                                        >－ F1  -
+                                        [Movie]
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="fas fa-person fav-icon"></i>－
+                                        Person of Interest - [Show]
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="fas fa-brain fav-icon"></i>－
+                                        Mentalist - [Show]
+                                    </td>
+                                </tr>
+                                <tr>
+                                   </td>
+                                </tr>
+                                <!-- <tr>
+                                    <td>
+                                        <i
+                                            class="fa-solid fa-ban fav-icon"
+                                        ></i
+                                        >－ Blacklist - [Show]
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="fas fa-laptop fav-icon"></i>－
+                                        IT Crowd - [Show]
+                                    </td>
+                                </tr> -->
+                            </table>
+                        </div>
+                        <div class="grid_row_box_dotted">
+                            <h2>Why the fiasco?</h2>
+                            <p>
+                                <em
+                                    >I've had a love-hate relationship with
+                                    computers over the years.</em
+                                >
+                            </p>
+                            <br />
+                            <p>
+                                It's fascinating how different inventions and
+                                realizations over the years has enabled to
+                                create the computer. I aspire to understand the
+                                underlying beauty behind this creation and
+                                contribute to it in whatever way I can.
+                            </p>
+                            <br />
+                            <p>
+                                As the years roll on, my love for computer
+                                systems deepens. I wish to share some of it with
+                                you, kind visitor.
+                            </p>
+                            <br />
+                            <p>Viva la open-source movement!</p>
+                        </div>
+                        <div class="grid_row_box_dotted">
+                            <h2>Getting in touch</h2>
+                            <p class="contact_link">
+                                <i class="fa-solid fa-envelope envelope"></i>>
+                                <a
+                                    href="mailto:ashutoshp.iitkgp@gmail.com"
+                                    target="_blank"
+                                    title="My Reddit account."
+                                    >Email</a
+                                >
+                            </p>
+                            <p class="contact_link">
+                                <i class="fa-brands fa-github github"></i>>
+                                <a
+                                    href="https://github.com/ash4dev"
+                                    target="_blank"
+                                    title="My Github account."
+                                    >Github
+                                </a>
+                            </p>
+                            <p class="contact_link">
+                                <i class="fa-brands fa-linkedin linkedin"></i>>
+                                <a
+                                    href="https://www.linkedin.com/in/ashutosh-panigrahy"
+                                    target="_blank"
+                                    title="My Linkedin account."
+                                    >Linkedin</a
+                                >
+                            </p>
+
+                            <p class="contact_link">
+                                <i class="fa-brands fa-reddit reddit"></i>>
+                                <a
+                                    href="https://www.reddit.com/user/Ok_Firefighter_2454/"
+                                    target="_blank"
+                                    title="My Reddit account."
+                                    >Reddit</a
+                                >
+                            </p>
+                            <br />
+                            <p>
+                                Be invitations for interesting projects, systems
+                                engineering opportunities, or friendly banter.
+                                You've found a friend!
+                            </p>
+                            <br />
+                            <p>
+                                Please wait atleast 24 hours before a follow up. 
+                            </p>
+                            <br/>
+                            <p>Thanks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
