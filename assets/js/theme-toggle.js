@@ -4,6 +4,7 @@
 
   const STORAGE_KEY = "segfaulter-theme";
   const DEFAULT_THEME = "dark";
+  const DESKTOP_WIDTH = 1200;
 
   const root = document.documentElement;
 
@@ -17,10 +18,12 @@
 
   let currentTheme = DEFAULT_THEME;
   let toggleButton = null;
+  let resizeTimer = null;
 
   function getSavedTheme() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
+
       return saved === "light" || saved === "dark"
         ? saved
         : DEFAULT_THEME;
@@ -29,20 +32,44 @@
     }
   }
 
+  function updateAvatar() {
+    const avatar = document.querySelector(
+      ".author__avatar img"
+    );
+
+    const paths = window.siteAvatarPaths;
+
+    if (!avatar || !paths) return;
+
+    const newSource = paths[currentTheme];
+
+    if (!newSource) return;
+
+    if (avatar.getAttribute("src") !== newSource) {
+      avatar.removeAttribute("srcset");
+      avatar.src = newSource;
+    }
+  }
+
   function updateButton() {
     if (!toggleButton) return;
 
-    const dark = currentTheme === "dark";
+    const isDark = currentTheme === "dark";
 
-    toggleButton.textContent = dark ? "☀" : "☾";
-    toggleButton.title = dark
+    toggleButton.textContent = isDark ? "☀" : "☾";
+    toggleButton.title = isDark
       ? "Switch to light mode"
       : "Switch to dark mode";
 
-    toggleButton.setAttribute("aria-label", toggleButton.title);
+    toggleButton.setAttribute(
+      "aria-label",
+      toggleButton.title
+    );
   }
 
   function applyTheme(theme) {
+    if (theme !== "light" && theme !== "dark") return;
+
     currentTheme = theme;
 
     if (originalStylesheet) {
@@ -58,54 +85,23 @@
     try {
       localStorage.setItem(STORAGE_KEY, theme);
     } catch (error) {
-      // Switching still works if storage is unavailable.
+      // Continue without persistent storage.
     }
 
+    updateAvatar();
     updateButton();
   }
 
-  // Restore all navigation links on wide screens.
-  function restoreWideNavigation() {
-    if (window.innerWidth < 1200) return;
-
-    const nav = document.getElementById("site-nav");
-    if (!nav) return;
-
-    const visible = nav.querySelector(".visible-links");
-    const hidden = nav.querySelector(".hidden-links");
-    const menuButton = nav.querySelector(".greedy-nav__toggle");
-
-    if (visible && hidden) {
-      while (hidden.firstElementChild) {
-        visible.appendChild(hidden.firstElementChild);
-      }
-
-      hidden.classList.add("hidden");
-    }
-
-    if (menuButton) {
-      menuButton.classList.add("hidden");
-    }
-  }
-
-  // Put the theme button outside nav#site-nav.
   function createToggleButton() {
     const nav = document.getElementById("site-nav");
 
     if (!nav || !nav.parentElement) return;
 
-    const existing = document.getElementById("theme-toggle");
-
-    if (existing) {
-      toggleButton = existing;
-      updateButton();
-      return;
-    }
+    if (document.getElementById("theme-toggle")) return;
 
     toggleButton = document.createElement("button");
 
     toggleButton.id = "theme-toggle";
-    toggleButton.className = "theme-toggle";
     toggleButton.type = "button";
 
     toggleButton.addEventListener("click", function () {
@@ -114,15 +110,53 @@
       );
     });
 
-    // Append to .masthead__menu, NOT nav#site-nav.
+    // Keep toggle outside the navigation.
     nav.parentElement.appendChild(toggleButton);
 
     updateButton();
+    updateAvatar();
   }
 
-  // Apply saved preference immediately.
+  // Restore all links on a sufficiently wide screen.
+  function restoreDesktopNavigation() {
+    if (window.innerWidth < DESKTOP_WIDTH) return;
+
+    const nav = document.getElementById("site-nav");
+    if (!nav) return;
+
+    const visible = nav.querySelector(".visible-links");
+    const hidden = nav.querySelector(".hidden-links");
+    const menuButton = nav.querySelector(
+      ".greedy-nav__toggle"
+    );
+
+    if (!visible || !hidden) return;
+
+    // Move every collapsed link back into the visible list.
+    while (hidden.firstElementChild) {
+      visible.appendChild(hidden.firstElementChild);
+    }
+
+    hidden.classList.add("hidden");
+
+    if (menuButton) {
+      menuButton.classList.add("hidden");
+    }
+  }
+
+  function scheduleNavigationCheck() {
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(
+      restoreDesktopNavigation,
+      250
+    );
+  }
+
+  // Restore saved theme.
   applyTheme(getSavedTheme());
 
+  // Create the toggle.
   if (document.readyState === "loading") {
     document.addEventListener(
       "DOMContentLoaded",
@@ -133,13 +167,15 @@
     createToggleButton();
   }
 
-  // Run after Minimal Mistakes' navigation script.
+  // Wait for Minimal Mistakes navigation initialization.
   window.addEventListener("load", function () {
-    setTimeout(restoreWideNavigation, 100);
+    scheduleNavigationCheck();
   });
 
-  window.addEventListener("resize", function () {
-    setTimeout(restoreWideNavigation, 150);
-  });
+  // Recheck after browser resizing.
+  window.addEventListener(
+    "resize",
+    scheduleNavigationCheck
+  );
 
 })();

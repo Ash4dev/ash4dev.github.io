@@ -34,6 +34,14 @@
   }
 </style>
 
+<!-- Theme-specific author portraits -->
+<script>
+  window.siteAvatarPaths = {
+    dark: {{ '/assets/images/cover_dark.png' | relative_url | jsonify }},
+    light: {{ '/assets/images/cover_light.png' | relative_url | jsonify }}
+  };
+</script>
+
 <!-- ==========================================
      THEME STYLESHEETS
      ========================================== -->
@@ -124,6 +132,26 @@
     border: 3px solid #383838 !important;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
   }
+
+  /* Desktop: show all navigation links */
+@media (min-width: 1200px) {
+
+  #site-nav .visible-links {
+    display: flex !important;
+    overflow: visible !important;
+    flex-wrap: nowrap !important;
+  }
+
+  #site-nav .greedy-nav__toggle {
+    display: none !important;
+  }
+
+  #site-nav .hidden-links {
+    display: none !important;
+  }
+
+}
+
 </style>
 
 <!-- ==========================================

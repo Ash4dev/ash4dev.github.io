@@ -57,7 +57,7 @@ plugins:
 
 author:
   name   : "Ashutosh Panigrahy"
-  avatar : "/assets/images/cover.png"
+  avatar : "/assets/images/cover_dark.png"
   bio    : "Exploring performance-critical C++, concurrency, and computer architecture through the lens of low-latency finance."
   links:
     - label: "Email"
