@@ -1,0 +1,38 @@
+/* ==========================================
+   AUTHOR PROFILE PHOTO
+   Large, perfectly circular avatar
+   ========================================== */
+
+.sidebar .author__avatar {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    text-align: center !important;
+}
+
+.sidebar .author__avatar img {
+    display: block !important;
+
+    width: 300px !important;
+    height: 300px !important;
+
+    min-width: 300px !important;
+    min-height: 300px !important;
+
+    max-width: 300px !important;
+    max-height: 300px !important;
+
+    aspect-ratio: 1 / 1 !important;
+
+    object-fit: cover !important;
+    object-position: center 25% !important;
+
+    border-radius: 50% !important;
+
+    padding: 0 !important;
+    border: none !important;
+
+    margin: 0 auto 15px auto !important;
+
+    box-sizing: border-box !important;
+}

@@ -13,15 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
+title: segfaulter
+email: ashutoshp.iitkgp@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
+  Engineering hardware concious software, one bug at a time.
+  A low-level systems programming blog exploring C++, computer architecture, concurrency, and operating systems applied to low-latency quantitative finance.
+github_username: ash4dev
+minimal_mistakes_skin: neon
 search: true
 
 # Build settings
@@ -58,34 +56,43 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name   : "Ashutosh Panigrahy"
+  avatar : "/assets/images/cover.png"
+  bio    : "Exploring performance-critical C++, concurrency, and computer architecture through the lens of low-latency finance."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:ashutoshp.iitkgp@gmail.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/ashutosh-panigrahy/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/Ash4dev"
+    - label: "Getcracked"
+      icon: "fa-solid fa-code"
+      url: "https://getcracked.io/statistics/cmol1075f0c4jc42m6ruxh23h"
+    - label: "LeetCode"
+      icon: "fas fa-fw fa-laptop-code"
+      url: "https://leetcode.com/u/user0075pe/"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: "Mech Sympathy"
+      icon: "fas fa-fw fa-globe"
+      url: "https://mechanical-sympathy.blogspot.com/"
+    - label: "MIT Perf Eng"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/playlist?list=PLUl4u3cNGP63VIBQVWguXxZZi0566y7Wf"
+    - label: "Onur Mutlu"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://people.inf.ethz.ch/omutlu/"
+    - label: "CppInsights"
+      icon: "fas fa-fw fa-code"
+      url: "https://cppinsights.io/"
+    - label: "CppReference"
+      icon: "fas fa-fw fa-book"
+      url: "https://en.cppreference.com/w/"
 
 defaults:
   # _posts
