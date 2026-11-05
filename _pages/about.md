@@ -3,6 +3,15 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+I'm a software engineer who likes to know what's happening beneath the abstractions. 
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+I'm a 2025 IIT Kharagpur grad (Biotechnology and Financial Engineering) who worked as a Technical Consultant at TCG Digital, building real-time AI translation infrastructure for DFB football tournaments.
+
+Outside work, I build things to learn how they work: 
+1. [**Benchlite**](https://github.com/Ash4dev/benchlite), cycle-accurate experiment driven micro-benchmarking framework;
+2. [**MemAlloc**](https://github.com/Ash4dev/mem-alloc), custom arena and double-ended stack allocator in C; and
+3. [**Xchange**](https://github.com/Ash4dev/xchange), a C++ order matching engine with price-time priority.
+
+This blog is where I document that process through deep dives, experiments, and measurements. I believe the best way to understand a system is to build it, poke at it, and measure what it does.
+
+---

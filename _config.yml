@@ -56,10 +56,13 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Ashutosh Panigrahy"
+  name   : "<a href='/assets/pdfs/Ashutosh_Panigrahy.pdf'>Ashutosh Panigrahy</a>"
   avatar : "/assets/images/cover_dark.png"
   bio    : "Exploring performance-critical C++, concurrency, and computer architecture through the lens of low-latency finance."
   links:
+    - label: "Resume"
+      icon: "fas fa-fw fa-file-pdf"
+      url: "/assets/pdfs/Ashutosh_Panigrahy.pdf"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:ashutoshp.iitkgp@gmail.com"
