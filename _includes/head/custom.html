@@ -1,4 +1,8 @@
 
+<!-- ==========================================
+     AUTHOR AVATAR
+     ========================================== -->
+
 <style>
   .author__avatar {
     text-align: center !important;
@@ -16,13 +20,10 @@
     max-width: 250px !important;
     max-height: 250px !important;
 
-    /* Zoom out: show the full portrait */
     object-fit: contain !important;
-    object-position: center center !important;
+    object-position: center !important;
 
-    /* Maintain circular frame */
     border-radius: 50% !important;
-
     background-color: #bab7b9;
 
     padding: 0 !important;
@@ -33,3 +34,100 @@
   }
 </style>
 
+<!-- ==========================================
+     THEME STYLESHEETS
+     ========================================== -->
+
+<link
+  rel="stylesheet"
+  href="{{ '/assets/css/theme-light.css' | relative_url }}"
+  data-theme-stylesheet="light"
+  disabled
+>
+
+<link
+  rel="stylesheet"
+  href="{{ '/assets/css/theme-dark.css' | relative_url }}"
+  data-theme-stylesheet="dark"
+  disabled
+>
+
+<!-- ==========================================
+     THEME TOGGLE LAYOUT
+     ========================================== -->
+
+<style>
+  /* Navigation and toggle share available header space */
+  .masthead__menu {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  /* Navigation takes all remaining space */
+  #site-nav {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    width: auto !important;
+  }
+
+  /* Toggle occupies its own space */
+  #theme-toggle {
+    position: static !important;
+    transform: none !important;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 38px;
+
+    width: 38px;
+    height: 38px;
+
+    margin: 0 0 0 12px;
+    padding: 0;
+
+    border: 1px solid currentColor;
+    border-radius: 50%;
+
+    color: inherit;
+    background: transparent;
+
+    font-size: 20px;
+    line-height: 1;
+
+    cursor: pointer;
+  }
+
+  #theme-toggle:hover {
+    opacity: 0.7;
+  }
+
+  #theme-toggle:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+
+  /* Light mode avatar visibility */
+  html[data-theme="light"] .author__avatar img {
+    opacity: 1 !important;
+    filter: none !important;
+    border: 3px solid #fff !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  }
+
+  /* Dark mode avatar visibility */
+  html[data-theme="dark"] .author__avatar img {
+    opacity: 1 !important;
+    filter: none !important;
+    border: 3px solid #383838 !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  }
+</style>
+
+<!-- ==========================================
+     THEME SWITCHING SCRIPT
+     ========================================== -->
+
+<script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
