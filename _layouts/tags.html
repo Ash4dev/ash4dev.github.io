@@ -1,0 +1,9 @@
+---
+layout: archive
+---
+
+{%- assign locale = page.locale | default: layout.locale | default: site.locale %}
+
+{{ content }}
+
+{% include posts-taxonomy-collapsible.html locale=locale taxonomies=site.tags %}
